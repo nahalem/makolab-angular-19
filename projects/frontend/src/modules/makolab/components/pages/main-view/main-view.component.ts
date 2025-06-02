@@ -5,7 +5,6 @@ import { ToastrModule, ToastrService } from 'ngx-toastr';
 import { MaterialModule } from '../../../../../common/material.module';
 import { NotificationService } from '../../../../../core/services/notification/notification.service';
 import { OverlayService } from '../../../../../core/services/overlay/overlay.service';
-import { CustomEventService } from '../../../../../core/services/custom-event/custom-event.service';
 import { MatTabChangeEvent } from '@angular/material/tabs';
 import { FormControl } from '@angular/forms';
 import { NotificationHelper } from '../../../../../core/services/notification/notification.helper';
@@ -38,10 +37,6 @@ export class MainViewComponent implements OnInit {
 
   constructor(
       public overlayService: OverlayService,
-      private _event: CustomEventService,
-      private notificationService: NotificationService,
-      private route: ActivatedRoute,
-      private router: Router,
       @Inject(DOCUMENT) private document: Document
   ) {
     this.notifications = new NotificationHelper();

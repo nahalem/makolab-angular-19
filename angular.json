@@ -42,12 +42,6 @@
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                  "projects/frontends/src/scss/",
-                  "projects/frontends/src/scss/abstracts",
-                  "projects/frontends/src/scss/base",
-                  "projects/frontends/src/scss/components",
-                  "projects/frontends/src/scss/layout",
-                  "projects/frontends/src/scss/vendors"
               ]
             },
             "scripts": [

@@ -30,9 +30,7 @@ export class LicensePlateProblemComponent {
   index = 0;
   plate = '';
 
-  constructor(
-    private plateService: LicensePlateService
-  ) {}
+  constructor(private plateService: LicensePlateService) {}
 
   getPlate() {
     this.plate = this.plateService.getPlate(this.index);

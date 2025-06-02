@@ -1,4 +1,9 @@
 <p>license-plate-problem works!</p>
- <input type="number" [(ngModel)]="index" />
-    <button (click)="getPlate()">Get Plate</button>
-    <p>{{ plate }}</p>
+<form (ngSubmit)="getPlate()" #plateForm="ngForm">
+      <label for="index">Wprowadź indeks (n):</label>
+      <input type="number" id="index" name="index" [(ngModel)]="index" min="0" required>
+      <button type="submit" [disabled]="!plateForm.form.valid">Generuj tablicę</button>
+</form>
+@if(plate) {
+  <strong>Wynikowa tablica:</strong> {{ plate }}
+}

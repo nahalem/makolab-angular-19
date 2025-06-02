@@ -26,16 +26,18 @@ import { FormsModule } from '@angular/forms';
 })
 export class ConcurrentExcerciseComponent {
   responses: any[] = [];
+  maxConcurrency = 1;
+  urls: string[] = [];
 
   constructor(
     private service: ConcurrentFetchService
   ) {}
 
   run() {
-    const urls = [
+    this.urls = [
       'https://jsonplaceholder.typicode.com/posts/1',
       'https://jsonplaceholder.typicode.com/posts/2'
     ];
-    this.service.fetchWithConcurrency(urls, 1).then(res => this.responses = res);
+    this.service.fetchWithConcurrency(this.urls, this.maxConcurrency).then(res => this.responses = res);
   }
 }

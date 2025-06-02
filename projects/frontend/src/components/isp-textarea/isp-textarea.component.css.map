@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,uBAAuB,CAAC;EACpB,KAAK,EAAE,IAAI;CACd;;AAED,AAAA,mBAAmB,CAAC;EAChB,SAAS,EAAE,MAAM;EACjB,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,GAAG;EACX,KAAK,EAAE,IAAI;CAEd;;AAED,AAAA,gBAAgB,AAAA,MAAM,CAAC;EACnB,OAAO,EAAE,GAAG;EACZ,KAAK,EAAE,GAAG;EACV,WAAW,EAAE,GAAG;CACnB",
-    "sources": [
-        "isp-textarea.component.scss"
-    ],
-    "names": [],
-    "file": "isp-textarea.component.css"
-}

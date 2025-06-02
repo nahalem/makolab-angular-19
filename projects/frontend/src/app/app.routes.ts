@@ -1,5 +1,4 @@
 import { RouterModule, Routes } from '@angular/router';
-import { PageNotFoundComponent } from '../components/page-not-found/page-not-found.component';
 import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
@@ -15,7 +14,6 @@ export const routes: Routes = [
         import('./../modules/makolab/makolab.routes')
             .then(m => m.makolabRoutes)
   },
-  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
