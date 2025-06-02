@@ -1,0 +1,53 @@
+<ng-container [formGroup]="form">
+    <ng-content></ng-content>
+    <!-- appearance="outline" -->
+    <!-- <mat-form-field class="full-width"> -->
+    <mat-form-field class="full-width" [attr.disabled]="readonly">
+        <!-- <mat-label *ngIf="label" [ngClass]="{'asterix--before': isRequired}"><b>{{label}}</b></mat-label> -->
+        @if(label)
+        {
+          <mat-label><b>{{ label }}</b></mat-label>
+        }
+
+        <textarea
+            cdkAutosizeMaxRows
+            [formControlName]="controlName"
+            [disabled]="readonly"
+            [readonly]="readonly"
+            [(ngModel)]="value"
+            matInput
+            [placeholder]="placeholder"
+            cols="220"
+            [rows]='rows'
+            maxlength="{{ maxChars }}"
+            [id]="id"
+            [name]="name"
+            (change)="setValue($event)"
+            (keyup)="setValue($event)"
+            [ngStyle]="
+                readonly
+                    ? { color: 'rgb(169,169,169)' }
+                    : { color: 'rgb(0,0,0)' }
+            "></textarea>
+
+        @if(value && isEmptyValue)
+        {
+          <span class="remaining--counter"
+          >{{ value.length }}/{{ maxChars }}</span>
+        }
+        @if(!isEmptyValue)
+        {
+          <span class="remaining--counter"
+          >0/{{ maxChars }}</span>
+        }
+        @if(!form.get(controlName)!.valid && form.get(controlName)!.touched) {
+          <mat-error>
+              <isp-form-error
+                  [form]="form"
+                  [controlName]="controlName"
+                  [title]="placeholder">
+              </isp-form-error>
+          </mat-error>
+        }
+    </mat-form-field>
+</ng-container>

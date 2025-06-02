@@ -1,0 +1,35 @@
+@import './../../scss/vendors/rbColors';
+// :host {
+//      ::ng-deep {
+//         .mat-form-field-infix {
+//             width: auto !important;
+//         }
+//     }
+// }
+// :host {
+//      ::ng-deep {
+//         .mat-form-field {
+//             width: auto !important;
+//         }
+//         .mat-select-value {
+//             max-width: 100%;
+//             width: auto;
+//         }
+//     }
+// }
+:host {
+    ::ng-deep .mat-select-panel {
+        min-width: 100% !important;
+    }
+}
+
+.asterix--before:after {
+    content: '*';
+    color: red;
+    margin-left: 5px;
+}
+
+.example-additional-selection {
+    opacity: 0.75;
+    font-size: 0.75em;
+}

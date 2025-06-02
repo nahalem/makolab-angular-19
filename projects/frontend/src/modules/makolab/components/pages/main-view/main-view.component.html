@@ -1,0 +1,15 @@
+<div class="uk-container">
+<div class="mat-h1 uk-text-left uk-flex uk-flex-center uk-margin-medium-bottom">Makolab - Senior Developer Technical Test</div>
+  <mat-tab-group dynamicHeight animationDuration="200ms" (selectedTabChange)="onTabChange($event)" [selectedIndex]="selected.value" (selectedIndexChange)="selected.setValue($event)">
+      @for(item of tabsDefinition(); track item.selectedIndex){
+        <mat-tab [label]="item.title!" [disabled]="isDisabled(item)">
+          @if(item.selectedIndex === 0) {
+           <app-concurrency-excercise></app-concurrency-excercise>
+          }
+          @else if(item.selectedIndex === 1) {
+           <app-license-plate-problem></app-license-plate-problem>
+          }
+        </mat-tab>
+      }
+  </mat-tab-group>
+</div>

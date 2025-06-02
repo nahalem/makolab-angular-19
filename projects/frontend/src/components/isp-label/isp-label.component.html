@@ -1,0 +1,18 @@
+@if(label)
+{
+  <span>
+    <label for="for">
+      @if(!asALink)
+      {
+        <span>
+            {{ label }}
+        </span>
+      }
+      @if(!asALink)
+      {
+        <a [href]="url">{{ label }} </a>
+      }
+    </label>
+  </span>
+}
+

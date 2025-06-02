@@ -1,0 +1,19 @@
+@import './../../scss/vendors/rbColors';
+.icon-display {
+    transform: scale(1.5);
+    color: $white;
+}
+
+.button-container {
+    background-color: $app-violet;
+    color: $white;
+}
+
+:host {
+    ::ng-deep {
+        .mat-icon {
+            height: auto;
+            width: auto;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+<div>
+  @if(form.get(controlName)?.errors) {
+    @if(form.get(controlName)?.hasError('required') && title) {
+      <span>
+        {{ title }} is required!
+      </span>
+    }
+  }
+  <ng-content></ng-content>
+</div>

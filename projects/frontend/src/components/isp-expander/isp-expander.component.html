@@ -1,0 +1,39 @@
+@if(data.length > 0)
+{
+  <span (click)="setExpanderState()">
+      <div class="uk-flex-inline">
+        @if(!expanded)
+        {
+          <mat-icon [matTooltip]="'Expand more'">expand_more</mat-icon><span class="isp-expander-text" *ngIf="!expanded"></span>
+        }
+        @if(expanded)
+        {
+          <mat-icon [matTooltip]="'Expand less'"
+            >expand_less</mat-icon
+          ><span class="isp-expander-text" *ngIf="expanded"></span>
+        }
+      </div>
+  </span>
+}
+
+<!-- <ul class="uk-list isp-expander-container">
+    <li *ngFor="let item of data; let index = index;" class="uk-open">
+        <div class="isp-expander-text" *ngIf="index === 0">
+            {{data[0]}}
+        </div>
+        <div *ngIf="index > 0 && expanded" class="isp-expander-text">
+            {{item}}
+        </div>
+    </li>
+</ul> -->
+<!-- <div class="uk-margin-small-right container">
+    <mat-chip-list
+        *ngIf="expanded"
+        #chipGrid
+        aria-label="Fruit selection"
+        class="uk-padding-small uk-margin-small">
+        <mat-chip *ngFor="let item of data" class="isp-chip-container">
+            {{ item }}
+        </mat-chip>
+    </mat-chip-list>
+</div> -->

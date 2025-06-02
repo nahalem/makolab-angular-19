@@ -1,0 +1,36 @@
+<div class="uk-flex uk-flex-center uk-flex-middle">
+    @if(isButtonIcon)
+    {
+      <div
+          class="uk-margin-small-left uk-margin-small-right uk-margin-small-top uk-margin-small-bottom">
+          <button
+              mat-icon-button
+              [matTooltip]="toolTip"
+              (click)="onClick()"
+              [disabled]="!disabled"
+              [ngStyle]="{ 'background-color': backgroundColor }">
+              <mat-icon [class]="cssClass" color="primary">{{ icon }}</mat-icon>
+          </button>
+      </div>
+    }
+    @if(!isButtonIcon)
+    {
+      <div
+          class="uk-margin-small-left uk-margin-small-right uk-margin-small-top uk-margin-small-bottom">
+          <button
+              mat-raised-button
+              color="primary"
+              [matTooltip]="toolTip"
+              class="button-container"
+              [ngStyle]="{ 'background-color': backgroundColor }"
+              [disabled]="!disabled"
+              (click)="onClick()">
+              <mat-icon class="button-icon" *ngIf="icon">{{ icon }}</mat-icon>
+              <span class="uk-text-small">{{ label }}</span>
+          </button>
+      </div>
+    }
+    <div class="uk-flex uk-flex-center">
+        <ng-content></ng-content>
+    </div>
+</div>
