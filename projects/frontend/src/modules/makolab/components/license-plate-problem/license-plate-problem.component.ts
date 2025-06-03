@@ -1,13 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
 import { MaterialModule } from '../../../../common/material.module';
 import { NotificationService } from '../../../../core/services/notification/notification.service';
 import { LicensePlateService } from '../../services/license-plate.service';
 import { FormsModule } from '@angular/forms';
-
-
 
 @Component({
   selector: 'app-license-plate-problem',

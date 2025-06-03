@@ -33,10 +33,26 @@ export class ConcurrentExcerciseComponent {
     private service: ConcurrentFetchService
   ) {}
 
+  setValue($event: any): void {
+    this.responses = [];
+    let _value = $event.target.value;
+  }
+
+  onKeyDownPress($event: any): void {
+    this.responses = [];
+    if ($event.keyCode === 13) {
+      $event.preventDefault();
+    }
+  }
+
   run() {
     this.urls = [
       'https://jsonplaceholder.typicode.com/posts/1',
-      'https://jsonplaceholder.typicode.com/posts/2'
+      'https://jsonplaceholder.typicode.com/posts/2',
+      'https://jsonplaceholder.typicode.com/posts/3',
+      'https://jsonplaceholder.typicode.com/posts/4',
+      'https://jsonplaceholder.typicode.com/posts/5',
+      'https://jsonplaceholder.typicode.com/posts/6',
     ];
     this.service.fetchWithConcurrency(this.urls, this.maxConcurrency).then(res => this.responses = res);
   }

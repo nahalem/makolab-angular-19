@@ -21,9 +21,6 @@ export class AppComponent  implements OnInit{
     @Inject(DOCUMENT) private document: Document,
     @Inject(MAT_DIALOG_DATA) public matDialogData: any
   ) {
-      console.log('====================================');
-      console.log("@@@ AppComponent matDialogData", matDialogData);
-      console.log('====================================');
   }
 
   ngOnInit(): void {

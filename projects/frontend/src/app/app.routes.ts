@@ -6,7 +6,6 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'makolab',
     pathMatch: 'full',
-    //component: AppComponent
   },
   {
     path: 'makolab',

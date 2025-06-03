@@ -1,3 +1,12 @@
-<p>concurrency-excercise works!</p>
-<button (click)="run()">Run Concurrent Fetch</button>
-<pre>{{ responses | json }}</pre>
+<form (ngSubmit)="run()" #plateForm="ngForm">
+      <mat-form-field class="example-form-field">
+        <mat-label  for="index" >Run Concurrent Fetch</mat-label>
+        <input matInput id="index" name="index" type="number" [(ngModel)]="maxConcurrency" min="0" [max]="urls.length" required (change)="setValue($event)" (keydown)="onKeyDownPress($event)">
+      </mat-form-field>
+
+      <button mat-button type="submit">Get url's</button>
+</form>
+
+@if(maxConcurrency > 0 && responses) {
+  <pre>{{ responses | json }}</pre>
+}
