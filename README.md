@@ -1,4 +1,4 @@
-# Angular19Workspace
+# makolab-angular-19-workspace
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
 
@@ -25,20 +25,3 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-
-## Run Node JS server sample 
-cd projects\backend
-
-Run below command to run server
-
-node server.js
-node medicines-server.js
-node vehicles-server.js
-
-## Generate component
-ng generate component COMPONENT_NAME --standalone --flat=false
-
-
-## Libraries:
-https://www.npmjs.com/package/ngx-spinner#usage - Spinner
-https://www.npmjs.com/package/ngx-toastr - toastr
